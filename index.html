@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Badge</title>
+</head>
+<body>
+
+    <div id="preload">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">
+            <svg class="lang-icon" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="16" fill="#012169"/>
+                <path d="M0 0 L24 16 M24 0 L0 16" stroke="#fff" stroke-width="3"/>
+                <path d="M0 0 L24 16 M24 0 L0 16" stroke="#C8102E" stroke-width="2"/>
+                <path d="M12 0 V16 M0 8 H24" stroke="#fff" stroke-width="5"/>
+                <path d="M12 0 V16 M0 8 H24" stroke="#C8102E" stroke-width="3"/>
+            </svg>
+            <span>EN</span>
+        </button>
+        <button class="lang-btn" data-lang="ru">
+            <svg class="lang-icon" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="16" fill="#fff"/>
+                <rect y="5.33" width="24" height="5.33" fill="#0039A6"/>
+                <rect y="10.66" width="24" height="5.34" fill="#D52B1E"/>
+            </svg>
+            <span>RU</span>
+        </button>
+    </div>
+
+    <div class="header-row">
+        <button class="projects" data-i18n="btn_projects">My projects</button>
+        <h1 class="portfolio" data-i18n="title">The Portfolio</h1>
+        <button class="infome" data-i18n="btn_info">My info</button>
+    </div>
+
+    <div class="cards">
+
+        <div class="offers">
+            <div class="offers-top">
+                <h1 class="offers-name" data-i18n="offers_name">What i offer</h1>
+                <div class="list-offers">
+                    <span class="offers-group backend" data-i18n="offers_1">Backend development</span>
+                    <span class="offers-group restapi" data-i18n="offers_2">Telegram bots</span>
+                    <span class="offers-group" data-i18n="offers_3">SQL integration</span>
+                </div>
+            </div>
+            <div class="offers-container">
+                <div class="offers-group2 me">
+                    <span class="xz" data-i18n="offers_4">thx</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="info-top">
+                <h1 class="info-name" data-i18n="info_name">About me</h1>
+                <div class="info-header">
+                    <span class="telegram">@illeg4lUser</span>
+                </div>
+            </div>
+            <div class="info-container">
+                <div class="info-group me">
+                    <span class="lets" data-i18n="info_1">15yo</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="badge">
+            <div class="badge-top">
+                <h1 class="name" data-i18n="badge_name">My stek</h1>
+                <div class="badge-header">
+                    <span class="senior" data-i18n="badge_senior">senior</span>
+                    <span class="profile-badge" data-i18n="badge_role">Python developer</span>
+                </div>
+            </div>
+            <div class="skills-container">
+                <div class="skills-group core">
+                    <span class="skill-title" data-i18n="skills_core">Core:</span>
+                    <span class="pyton-core">Python</span>
+                    <span class="cpp">C++</span>
+                </div>
+                <div class="skills-group web">
+                    <span class="skill-title" data-i18n="skills_web">Web:</span>
+                    <span class="frontend" data-i18n="skills_frontend">Frontend</span>
+                    <span class="baend" data-i18n="skills_backend">Backend</span>
+                    <span class="cyber" data-i18n="skills_cyber">Cybersecurity</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="projects-heading reveal" data-i18n="projects_heading">My projects</h2>
+
+    <div class="projects-section reveal" id="projects-section">
+        <div class="projects-left">
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="code-filename">illeg4l.py</span>
+                </div>
+                <pre class="code-body"><code id="typed-code"></code><span class="cursor"></span></pre>
+            </div>
+        </div>
+
+        <div class="projects-right">
+            <a class="project-card" href="https://github.com/Pvvxsh/TheOsint" target="_blank" rel="noopener noreferrer">
+                <div class="project-top">
+                    <h2 class="project-name">TheOsint</h2>
+                    <span class="project-lang">Python</span>
+                </div>
+                <p class="project-desc" data-i18n="proj1_desc">OSINT tool for searching information by username, email and IP address. Single-script solution for quick reconnaissance.</p>
+                <div class="project-tags">
+                    <span>OSINT</span>
+                    <span>CLI</span>
+                    <span>Recon</span>
+                </div>
+            </a>
+
+            <a class="project-card" href="https://github.com/Pvvxsh/LLM-WIKI" target="_blank" rel="noopener noreferrer">
+                <div class="project-top">
+                    <h2 class="project-name">LLM-WIKI</h2>
+                    <span class="project-lang">Python</span>
+                </div>
+                <p class="project-desc" data-i18n="proj2_desc">Modular LLM system with vector search and prompt engineering. Architecture: core, clients, interface, llm, vector.</p>
+                <div class="project-tags">
+                    <span>LLM</span>
+                    <span>RAG</span>
+                    <span>Vector DB</span>
+                    <span>Python</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
